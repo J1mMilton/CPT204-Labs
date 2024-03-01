@@ -1,5 +1,5 @@
 import lab1.inPlaceReverse;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-
+import lab1.StopWatch;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -8,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
+        StopWatch watch = new StopWatch();
+        watch.start();
         System.out.printf("Hello and welcome!");
         System.out.println(5/2);
         System.out.println("Please input the array size");
@@ -21,5 +23,8 @@ public class Main {
         }
         inPlaceReverse.reverseInPlace(array);
         System.out.println(Arrays.toString(array));
+        watch.stop();
+        System.out.println(watch.getElapsedTime());
+        //System.out.println(System.currentTimeMillis());
     }
 }
