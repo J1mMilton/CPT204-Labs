@@ -29,8 +29,10 @@ public class Main {
         //System.out.println(System.currentTimeMillis());
         Student zzr = new Student("zr","z","zmail","2");
         Student zby = new Student("by","z","bmail", "3");
+        Student nobody = new Student();
         System.out.println(zzr);
         System.out.println(zby);
         System.out.println(zzr.less(zby));
+        System.out.println(nobody);
     }
 }
