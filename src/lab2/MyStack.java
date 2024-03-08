@@ -26,7 +26,11 @@ public class MyStack extends ArrayList<Object> {
     }
 
     public int search(Object o) {
-        return super.lastIndexOf(o);
+        int index = super.lastIndexOf(o);
+        if (index == -1) {
+            return index;
+        }
+        return getSize() - 1 - index;
     }
 
     @Override

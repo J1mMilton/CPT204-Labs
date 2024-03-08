@@ -10,5 +10,8 @@ public class MyPointTest {
         MyPoint p3 = new MyPoint(13.25, 24.8);
         System.out.println(p1.distance(p2));
         System.out.println(MyPoint.distance(p1, p2));
+        System.out.println(p3.distance(p2));
+        System.out.println(MyPoint.distance(p2, p3));
+        System.out.println(MyPoint.distance(p1, p3));
     }
 }

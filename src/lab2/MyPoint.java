@@ -15,11 +15,13 @@ public class MyPoint {
     }
 
     public double distance(MyPoint point) {
-        return (x-point.getX())*(x-point.getX()) + (y-point.getY())*(y-point.getY());
+        return Math.sqrt((x-point.getX())*(x-point.getX()) + (y-point.getY())*(y-point.getY()));
     }
 
     public static double distance(MyPoint a, MyPoint b) {
-        return (a.getX()-b.getX())*(a.getX()-b.getX()) + (a.getY()-b.getY())*(a.getY()-b.getY());
+        //System.out.println(a.getX()-b.getX());
+        //System.out.println(a.getY()-b.getY());
+        return Math.sqrt((a.getX()-b.getX())*(a.getX()-b.getX()) + (a.getY()-b.getY())*(a.getY()-b.getY()));
     }
 
     public double getX() {
