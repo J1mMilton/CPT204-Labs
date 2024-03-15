@@ -25,6 +25,7 @@ public class MyStackCloneableTest {
         MyStackCloneable stack2 = (MyStackCloneable) stack.clone();
         stack2.push("f");
 
+        System.out.println(stack);
         System.out.println(stack2);
 
         System.out.println("---------------------------------------");
@@ -40,6 +41,7 @@ public class MyStackCloneableTest {
         System.out.println("========================================");
         MyLecStack stack4 = (MyLecStack) stack3.clone();
         stack4.push("6");
+        System.out.println(stack3);
         System.out.println(stack4);
     }
 }

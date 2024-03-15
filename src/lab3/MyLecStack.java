@@ -1,5 +1,7 @@
 package lab3;
 
+import java.util.ArrayList;
+
 public class MyLecStack implements Cloneable{
     private java.util.ArrayList list = new java.util.ArrayList();
     public void push(Object o) {
@@ -29,7 +31,9 @@ public class MyLecStack implements Cloneable{
     @Override
     public Object clone() {
         try {
-            return super.clone();
+            MyLecStack stack = (MyLecStack) super.clone();
+            stack.list = (ArrayList) this.list.clone();
+            return stack;
         } catch (CloneNotSupportedException ex) {
             System.out.println("shit");
             return null;
