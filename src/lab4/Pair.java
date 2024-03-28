@@ -10,7 +10,7 @@ public class Pair<E, T> {
         this.second = second;
     }
 
-    public static void print(Pair p) {
+    public static void print(Pair<?, ?> p) {
         System.out.println(p.first + " " + p.second);
     }
 
