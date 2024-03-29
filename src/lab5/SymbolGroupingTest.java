@@ -16,6 +16,18 @@ public class SymbolGroupingTest {
         Assertions.assertEquals("Unpaired", SymbolGrouping.group(str));
     }
 
+
+    @Test
+    public void testInverse() {
+        String str = ")(";
+        Assertions.assertEquals("Unpaired", SymbolGrouping.group(str));
+    }
+    @Test
+    public void testIntersection() {
+        String str = "([)]";
+        Assertions.assertEquals("Unpaired", SymbolGrouping.group(str));
+    }
+
     @Test
     public void emptyTest() {
         String str = "";

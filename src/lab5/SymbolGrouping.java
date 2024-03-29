@@ -12,7 +12,7 @@ public class SymbolGrouping {
                 parens.push('(');
             }
             try {
-                if (str.charAt(i) == ')') {
+                if (str.charAt(i) == ')' && parens.peek() == '(') {
                     parens.pop();
                 }
             } catch (EmptyStackException e) {
@@ -23,7 +23,7 @@ public class SymbolGrouping {
                 parens.push('{');
             }
             try {
-                if (str.charAt(i) == '}') {
+                if (str.charAt(i) == '}' && parens.peek() == '{') {
                     parens.pop();
                 }
             } catch (EmptyStackException e) {
@@ -34,7 +34,7 @@ public class SymbolGrouping {
                 parens.push('[');
             }
             try {
-                if (str.charAt(i) == ']') {
+                if (str.charAt(i) == ']' && parens.peek() == '[') {
                     parens.pop();
                 }
             } catch (EmptyStackException e) {
