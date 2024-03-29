@@ -28,5 +28,10 @@ public class ListIteratorTest {
         ListIterator.iterator(list);
         t2 = System.currentTimeMillis();
         System.out.println("Iterator used " + (t2 - t1) + " milliseconds");
+
+        t1 = System.currentTimeMillis();
+        ListIterator.foreach(list);
+        t2 = System.currentTimeMillis();
+        System.out.println("Foreach used " + (t2 - t1) + " milliseconds");
     }
 }

@@ -1,5 +1,6 @@
 package lab5;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class ListIterator {
@@ -9,9 +10,16 @@ public class ListIterator {
         }
     }
 
-    public static void iterator(List<?> list) {
+    public static void foreach(List<?> list) {
         for (Object e: list) {
             e = e;
+        }
+    }
+
+    public static void iterator(List<?> list) {
+        Iterator<?> iterator = list.iterator();
+        while(iterator.hasNext()) {
+            iterator.next();
         }
     }
 }
